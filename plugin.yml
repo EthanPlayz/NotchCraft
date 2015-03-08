@@ -1,0 +1,11 @@
+name: NotchCraft
+author: buildcarter8
+version: 1.0
+main: me.buildcarter8.NotchCraft.Notchcraft
+commands:
+  notchcraft:
+         description: Main Command.
+         usage: /<command>
+  staff:
+     description: Staff management
+     usage: /<command>
