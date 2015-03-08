@@ -36,7 +36,7 @@ public class Notchcraft extends JavaPlugin
 	public final Logger log = Bukkit.getLogger();
 	 public String PLUGIN_NAME = "NotchCraft";
 	 public static String STAFF_NAME = "StaffList.yml";
-	 public static String VERSION = "v1.0";
+	 public static String VERSION = "v1.5";
 	 public String COMMAND_PATH = "me.buildcarter8.NotchCraft.Commands";
 	 public String COMMAND_PREFIX = "Command_";
 	 
