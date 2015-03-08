@@ -1,5 +1,11 @@
 package me.buildcarter8.NotchCraft.Commands;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+
 import me.buildcarter8.NotchCraft.NC_Util;
 import me.buildcarter8.NotchCraft.Notchcraft;
 
@@ -7,6 +13,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 
 public class Command_staff extends NC_Command
@@ -35,22 +43,33 @@ public class Command_staff extends NC_Command
 			 {
 
 			String user_name = p.getName().toLowerCase().trim();
-			 NC_Util.
-			 Bukkit.broadcastMessage(ChatColor.AQUA + "[NC Staff] Adding " + user_name);
-			 }
+			 Bukkit.broadcastMessage(ChatColor.AQUA + "[NC Staff: " + sender.getName() + "] Adding " + user_name);
+			 FileConfiguration config = YamlConfiguration.loadConfiguration(new File(plugin.getDataFolder(), Notchcraft.STAFF_NAME)); 
+			 if (config.contains(user_name))
+			    {
+			        config.getStringList(user_name);
+			    }
+			   
+			  
+			    config.set(user_name, "");
+			    
+			    try
+			    {
+			        config.save(new File(plugin.getDataFolder(), Notchcraft.STAFF_NAME));
+			    }
+			    catch (IOException ex)
+			    {
+			        log.log(Level.SEVERE, null, ex);
+			    }
+			}
 		} catch (CantFindPlayerException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		 } else
-			 sender.sendMessage("Nope!");
-		return true;
-
-		 
-		
-		 }
 		 {
 }
 }
-
+		return true;
+	    }
+}
 
