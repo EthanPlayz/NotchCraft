@@ -43,7 +43,7 @@ public class Command_staff extends NC_Command
 			 {
 
 			String user_name = p.getName().toLowerCase().trim();
-			 Bukkit.broadcastMessage(ChatColor.AQUA + "[NC Staff: " + sender.getName() + "] Adding " + user_name);
+			 Bukkit.broadcastMessage(ChatColor.AQUA + "(Staff player -  " + sender.getName() + ") - Adding  " + user_name + " to staff");
 			 FileConfiguration config = YamlConfiguration.loadConfiguration(new File(plugin.getDataFolder(), Notchcraft.STAFF_NAME)); 
 			 if (config.contains(user_name))
 			    {
