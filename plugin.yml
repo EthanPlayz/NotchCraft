@@ -1,6 +1,6 @@
 name: NotchCraft
 author: buildcarter8
-version: 1.0
+version: 1.5-PR1
 main: me.buildcarter8.NotchCraft.Notchcraft
 commands:
   notchcraft:
