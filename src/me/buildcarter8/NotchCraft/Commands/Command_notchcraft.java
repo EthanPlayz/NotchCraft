@@ -12,7 +12,7 @@ public class Command_notchcraft extends NC_Command
 	public boolean run(CommandSender sender, Player sender_p, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
 		sender.sendMessage(ChatColor.AQUA + "======================================");
-		sender.sendMessage(ChatColor.GREEN + "NotchCraft plugin vs 1.0, coded by buildcarter8(dev/owner) and EthanPvPYT(Mod/DEV) " + Notchcraft.VERSION);
+		sender.sendMessage(ChatColor.GREEN + "NotchCraft plugin coded by buildcarter8(dev/owner) and EthanPvPYT(Mod/DEV). VERSION: " + Notchcraft.VERSION);
 		sender.sendMessage(ChatColor.AQUA + "======================================");
 		
 		
